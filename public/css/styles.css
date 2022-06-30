@@ -109,11 +109,11 @@ header > .container nav > ul > li > a {
 .top_banner a {
   display: block;
   width: 20%;
-  line-height: 50px;
-  background-color: pink;
+  padding: 10px;
+  background-color: #FF668B;
   text-align: center;
   border-radius: 20px;
-  color: black;
+  color: white;
   position: absolute;
   bottom: 20%;
   left: 15%;
@@ -178,13 +178,6 @@ h3 {
     /*上右下左*/
   }
 }
-.join {
-  width: 25%;
-  margin: 0px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
 section img {
   width: 50%;
 }
@@ -197,42 +190,40 @@ section p {
   color: black;
 }
 
-concent img {
+content {
+  position: relative;
+}
+
+contect img {
   width: 50%;
   margin: 0px 20px 20px 20px;
   /*上右下左*/
 }
 
-concent .main_word {
+contect .main_word {
   margin-top: 10%;
 }
 
-concent p {
+contect p {
   width: 100%;
 }
 
-concent a {
+contect a {
   display: block;
   width: 20%;
-  line-height: 50px;
-  background-color: pink;
+  padding: 10px;
+  background-color: #FF668B;
   text-align: center;
   border-radius: 20px;
-  color: black;
+  color: white;
+  position: absolute;
+  left: 50%;
+  margin-left: -10%;
 }
 
 /*上右下左*/
 footer {
   background-color: #ffffdc;
-}
-
-dt {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-dd {
-  margin-bottom: 4px;
 }
 
 dd > a {
