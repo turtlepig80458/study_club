@@ -50,8 +50,8 @@ body {
 // 三大頁面按鈕start
 
 header>.container nav>ul>li {
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 40px;
+    margin-left: 40px;
     padding-top: 10px;
     text-align: center;
 }
@@ -85,7 +85,7 @@ header>.container nav>ul>li>a {
     //header同一行
     header>.container .logo {
         padding-top: 10px;
-        width: 12%;
+        width: 180px;
     }
 
     //logo大小(重複)
@@ -96,8 +96,8 @@ header>.container nav>ul>li>a {
 //  小於767px以下執行 start
 @media (max-width:767px) {
     header>.container .logo {
-        padding-top: 10px;
-        width: 20%;
+        padding-top: 12px;
+        width: 130px;
     }
 }
 
@@ -300,18 +300,31 @@ section p {
 // contect_書聚記錄
 // ===================================
 content{
+    height: 100px;
+    background-color: skyblue;
     position: relative;
-}
+} //沒用RRR
 contect img {
-    width: 50%;
+    width: 30%;
     margin: 0px 20px 20px 20px;
     /*上右下左*/
 }
 
-contect .main_word {
-    margin-top: 10%;
+contect .contect_word {
+    margin-top: 5%;
 }
 
+// content .order{
+//     display: flex;
+//     justify-content: space-between;
+// }
+contect .order img{
+    width: 30%;
+}
+contect .order p{
+    display: block;
+    width: 50%;
+}
 contect p{
     width: 100%;
 }
@@ -347,5 +360,5 @@ footer{
 // }
 
 dd>a {
-    color: #0d1a22;
+    color: black;
 }
