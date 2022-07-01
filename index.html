@@ -3,13 +3,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>book club</title>
+  <title>書箱視家</title>
   <link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body> 
   <header> 
     <div class="container">
-      <div class="row flex-center flex-space-between">
+      <div class="row">
         <div class="logo"> <a href="index.html"><img src="public/images/logo.svg" alt=""></a></div>
         <nav>
           <ul> 
@@ -18,10 +18,16 @@
             <li><a href="#">我的書房</a></li>
           </ul>
         </nav><a class="icon-menu" href="#"> <img src="public/images/icon_Menu.svg" alt=""></a>
+        <div class="sign"><a href="#"><img src="public/images/btn_sign in.svg" alt=""></a><a href="#"><img src="public/images/btn_sign up.svg" alt=""></a></div>
       </div>
     </div>
   </header>
-  <div class="top_banner"><img src="public/images/banner.png" alt=""><a href="#">加入我們</a></div>
+  <picture> 
+    <source media="(min-width:768px)" srcset="public/images/banner_pc.png" >
+      <img class="img_banner" src="public/images/banner_phone.png" alt="">
+      <a class="img_banner" href="#">加入我們</a>
+  </picture>
+  <!-- <div class="top_banner"><img src="public/images/banner.png" alt=""><a href="#">加入我們</a></div> -->
   <section> 
     <div class="container">
       <h3 class="text-center">透過讀書會，你可以...</h3>
@@ -134,10 +140,13 @@
           <dd><a href="#">FAQ問答</a></dd>
         </dl>
       </div>
-      <div class="down">
-        <p class="copyright">copyright2022 bookclub 
-          <div class="icon"> <a href="#"><img src="public/images/icon_line.svg" alt=""></a><a href="#"><img src="public/images/icon_fb.svg" alt=""></a><a href="#"><img src="public/images/icon_ig.svg" alt=""></a><a href="#"><img src="public/images/icon_gmail.svg" alt=""></a></div>
-        </p>
+    </div>
+    <div class="down">
+      <div class="container">
+        <div class="row"> 
+          <p class="copyright">copyright2022 bookclub </p>
+          <div class="icon"> <a href="#"> <img src="public/images/icon_line.svg" alt=""></a><a href="#"> <img src="public/images/icon_fb.svg" alt=""></a><a href="#"> <img src="public/images/icon_ig.svg" alt=""></a><a href="#"> <img src="public/images/icon_gmail.svg" alt=""></a></div>
+        </div>
       </div>
     </div>
   </footer>

@@ -23,10 +23,14 @@ body {
   max-width: 1600px;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 header > .container nav > ul > li {
-  margin-right: 40px;
   margin-left: 40px;
-  padding-top: 10px;
   text-align: center;
 }
 
@@ -37,7 +41,12 @@ header > .container nav > ul > li > a {
   letter-spacing: 2px;
 }
 
-@media (min-width: 768px) {
+header > .container .sign img {
+  width: 80px;
+  margin-left: 10px;
+}
+
+@media (min-width: 1008px) {
   header > .container > nav {
     width: 100%;
   }
@@ -47,33 +56,35 @@ header > .container nav > ul > li > a {
     justify-content: center;
   }
 
-  header > .container > .flex-center {
-    display: flex;
-    justify-content: space-between;
+  header > .container .row {
+    align-items: center;
   }
 
   header > .container .logo {
-    padding-top: 10px;
+    padding-top: 5px;
     width: 180px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1007px) {
   header > .container .logo {
     padding-top: 8px;
     width: 130px;
   }
+
+  header > .container .row {
+    align-items: center;
+  }
+
+  header > .container .sign {
+    display: none;
+  }
 }
-@media (min-width: 768px) {
+@media (min-width: 1008px) {
   .icon-menu {
     display: none;
   }
 }
-@media (max-width: 767px) {
-  .flex-space-between {
-    display: flex;
-    justify-content: space-between;
-  }
-
+@media (max-width: 1007px) {
   .icon-menu {
     display: block;
     color: #00ADA9;
@@ -100,15 +111,15 @@ header > .container nav > ul > li > a {
     transform: all 0.1s;
   }
 }
-.top_banner {
-  position: relative;
-}
-
-.top_banner img {
+picture .img_banner {
   width: 100%;
 }
 
-.top_banner a {
+picture .img_banner {
+  position: relative;
+}
+
+picture a {
   display: block;
   width: 20%;
   padding: 10px;
@@ -154,12 +165,6 @@ h3 {
   text-align: justify;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 @media (min-width: 768px) {
   .col-lg-3 {
     width: calc(100% / 4 - 30px);
@@ -184,36 +189,8 @@ section img {
   width: 50%;
 }
 
-section h4 {
+section a {
   color: black;
-}
-
-section p {
-  color: black;
-}
-
-content {
-  height: 100px;
-  background-color: skyblue;
-}
-
-contect img {
-  width: 30%;
-  margin: 0px 20px 20px 20px;
-  /*上右下左*/
-}
-
-contect .contect_word {
-  margin: auto 0;
-}
-
-contect .order img {
-  width: 10%;
-}
-
-contect .order p {
-  width: 80%;
-  margin: auto 0;
 }
 
 contect p {
@@ -232,6 +209,38 @@ contect a {
 }
 
 /*上右下左*/
+contect .row {
+  margin: 0 0 24px 0;
+}
+
+contect .row .order {
+  align-items: center;
+}
+
+contect .order img {
+  width: 10%;
+}
+
+contect .order p {
+  width: 80%;
+  margin: auto 0;
+}
+
+@media (min-width: 768px) {
+  contect img {
+    width: 30%;
+  }
+}
+@media (max-width: 767px) {
+  contect img {
+    width: 100%;
+    /*上右下左*/
+  }
+}
+contect .contect_word {
+  margin: auto 0;
+}
+
 footer {
   background-color: #ffffdc;
 }
@@ -247,4 +256,37 @@ dd {
 
 dd > a {
   color: black;
+}
+
+.down {
+  background-color: #ffff9b;
+}
+
+.down .row {
+  align-items: center;
+}
+
+.down .icon {
+  margin: 10px 0;
+}
+
+.down a {
+  margin: 0 10px;
+}
+
+@media (max-width: 767px) {
+  .down .row {
+    margin: 10 auto;
+    display: block;
+  }
+
+  .down .row .icon {
+    margin: 0 auto;
+    display: block;
+    width: max-content;
+  }
+
+  .down p {
+    text-align: center;
+  }
 }

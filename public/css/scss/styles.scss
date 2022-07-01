@@ -25,7 +25,12 @@ body {
     // background-color: rgb(255, 204, 110);
 }
 
-
+// 區塊相關樣式
+.row {
+    display: flex;
+    flex-wrap: wrap; // 換行
+    justify-content: space-between;
+}
 // ========================================================
 // 頁首區
 // ========================================================
@@ -34,11 +39,6 @@ body {
 //     background-color: rgb(252, 252, 175);
 //     height: 80px;
 // }
-
-// header>.container>.flex-center {
-//     display: flex;
-//     justify-content: space-between;
-// } //header所有東西同一行-網頁版?
 
 // // LOGO start
 // header>.container .logo{
@@ -50,9 +50,9 @@ body {
 // 三大頁面按鈕start
 
 header>.container nav>ul>li {
-    margin-right: 40px;
+    // margin-right: 40px;
     margin-left: 40px;
-    padding-top: 10px;
+    // padding-top: 10px;
     text-align: center;
 }
 
@@ -62,65 +62,59 @@ header>.container nav>ul>li>a {
     font-size: 1.2em;
     letter-spacing: 2px;
 }
+header>.container .sign img{
+    width: 80px;
+    margin-left: 10px;
+}
 
 // 三大頁面按鈕end
 
-//  超過768px以上執行 start
-@media(min-width:768px) {
+//  超過1008px以上執行 start
+@media(min-width:1008px) {
     header>.container>nav {
         width: 100%;
     }
-
     header>.container nav>ul {
         display: flex;
         justify-content: center;
     }
 
-    //三大按鈕同一行
-    header>.container>.flex-center {
-        display: flex;
-        justify-content: space-between;
+    header>.container .row{
+        align-items: center
     }
-
-    //header同一行
     header>.container .logo {
-        padding-top: 10px;
+        padding-top: 5px;
         width: 180px;
     }
+} // 超過1008px以上執行 end
 
-    //logo大小(重複)
-}
-
-// 超過768px以上執行 end
-
-//  小於767px以下執行 start
-@media (max-width:767px) {
+//  小於1007px以下執行 start
+@media (max-width:1007px) {
     header>.container .logo {
         padding-top: 8px;
         width: 130px;
     }
-}
+    header>.container .row{
+        align-items: center
+    }
+    header>.container .sign{
+        display: none;
+    }
+} //  小於1007px以下執行 end
 
 
 // =======================================
 // icon-menu
 // =======================================
-// 超過768px以上執行 start
-@media (min-width:768px) {
+// 超過1008px以上執行 start
+@media (min-width:1008px) {
     .icon-menu {
         display: none;
     }
-}
+} // min-width 1008px end
 
-// min-width 768px end
-
-// 小於767px以下執行 start
-@media (max-width:767px) {
-    .flex-space-between {
-        display: flex;
-        justify-content: space-between;
-    }
-
+// 小於1007px以下執行 start
+@media (max-width:1007px) {
     .icon-menu {
         display: block;
         // width: 10%;
@@ -151,19 +145,25 @@ header>.container nav>ul>li>a {
         left: -100vw;
         transform: all 0.1s;
     }
-}
+} // 小於1007px以下執行 end
 
 // ===================================
 // top_banner
 // ===================================
-.top_banner{
-    position: relative;
-}
-.top_banner img {
-    // background-image: url(public/images/banner.png);
+
+// .top_banner img {
+//     // background-image: url(public/images/banner.png);
+//     width: 100%;
+// }
+
+picture .img_banner{
     width: 100%;
 }
-.top_banner a{
+
+picture .img_banner{
+    position: relative;
+}
+picture a{
     display: block;
     width: 20%;
     // line-height: 50px;
@@ -221,13 +221,6 @@ h3 {
     text-align: justify;
 }
 
-// 區塊相關樣式
-.row {
-    display: flex;
-    flex-wrap: wrap; // 換行
-    justify-content: space-between;
-}
-
 // 超過768px以上執行 start
 @media (min-width:768px) {
     .col-lg-3 {
@@ -241,9 +234,7 @@ h3 {
         margin: 0px 15px 40px 15px;
         /*上右下左*/
     }
-}
-
-// min-width 768px end
+} // min-width 768px end
 
 // 小於767px以下執行 start
 @media (max-width:767px) {
@@ -264,73 +255,34 @@ h3 {
     //     margin: 0px 15px 40px 15px;
     //     /*上右下左*/
     // }
-}
+} // 小於767px以下執行 end
 
-
+// 小於428px以下執行 start
+// @media (max-width:428px) {
+//     .col-sm-12 {
+//         width: calc(100% / 1 - 30px);
+//         margin: 0px 15px 40px 15px;
+//         /*上右下左*/
+//     }
+// }
+// 小於428px以下執行 end
 
 // ==================================
 // section_加入讀書會
 // ==================================
 
-// .col-3 {
-//     width: calc(100% / 4 - 30px);
-//     margin: 0px 20px 40px 20px;
-//     /*上右下左*/
-
-// }
-
-// .join {
-
-//     width: 25%;
-//     margin: 0px;
-//     padding: 20px;
-//     box-sizing: border-box;
-// }
-
 section img {
     width: 50%;
 }
 
-section h4 {
-    color: black;
-}
-
-section p {
+section a {
     color: black;
 }
 
 // ===================================
-// contect_書聚記錄
+// contect共用
 // ===================================
-content{
-    height: 100px;
-    background-color: skyblue;
-} //沒用RRR
-contect img {
-    width: 30%;
-    margin: 0px 20px 20px 20px;
-    /*上右下左*/
-}
 
-contect .contect_word {
-    margin: auto 0;
-    // 上下/左右
-}
-
-// content .order{
-//     display: flex;
-//     justify-content: space-between;
-// }
-contect .order img{
-    width: 10%;
-}
-contect .order p{
-    width: 80%;
-    // max-width: 80%;
-    margin: auto 0;
-    // font-size: 14pt;
-    // 字大小
-}
 contect p{
     width: 100%;
 }
@@ -346,6 +298,51 @@ contect a{
     margin: 24px auto;
 }
 /*上右下左*/
+
+// ===================================
+// contect_心得回饋
+// ===================================
+contect .row{
+    margin: 0 0 24px 0;
+}
+contect .row .order{
+    align-items: center
+}
+contect .order img{
+    width: 10%;
+}
+contect .order p{
+    width: 80%;
+    // max-width: 80%;
+    margin: auto 0;
+    // font-size: 14pt;
+    // 字大小
+}
+// ===================================
+// contect_書聚記錄
+// ===================================
+
+// 768px以上 start
+@media(min-width:768px){
+    contect img {
+        width: 30%;
+    }
+} // 768px以上 end
+
+// 767px以下 start
+@media(max-width:767px){
+    contect img {
+        width: 100%;
+        // margin: 20px 0 0 0;
+        /*上右下左*/
+    }
+} // 767px以下 end
+
+contect .contect_word {
+    margin: auto 0;
+    // 上下/左右
+    // align-items: center
+}
 
 // =================================
 // footer
@@ -365,3 +362,35 @@ dd {
 dd>a {
     color: black;
 }
+
+.down{
+    background-color: rgb(255, 255, 155);
+}
+.down .row{
+    align-items: center
+}
+.down .icon{
+    margin: 10px 0;
+}
+.down a{
+    margin: 0 10px;
+}
+
+@media (max-width:767px) {    
+    .down .row{
+        margin: 10 auto;
+        display: block;
+    } //怪
+    .down .row .icon{
+        margin: 0 auto;
+        display: block;
+        width: max-content;
+    } //怪
+    .down p{
+        text-align: center
+    }
+    // .down .icon img{
+    //     width: 32px;
+    // }
+}
+    

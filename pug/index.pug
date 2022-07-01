@@ -3,14 +3,14 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title book club
+  title 書箱視家
   link(rel='stylesheet' href='public/css/styles.css')
 
 //- header start
 body 
     header 
         .container
-            .row.flex-center.flex-space-between
+            .row
                 .logo  
                     a(href='index.html')
                         img(src='public/images/logo.svg' alt='')
@@ -24,8 +24,14 @@ body
                             a(href="#") 我的書房
                 a.icon-menu(href="#") 
                     img(src="public/images/icon_Menu.svg", alt="")
+                .sign
+                    a(href="#")
+                        img(src="public/images/btn_sign in.svg", alt="")
+                    a(href="#")
+                        img(src="public/images/btn_sign up.svg", alt="")
     //- header end 
-
+    picture 
+        source
     .top_banner
         img(src="public/images/banner.png", alt="")
         a(href="#") 加入我們
@@ -152,14 +158,16 @@ body
                         a(href='#') 注意事項
                     dd
                         a(href='#') FAQ問答
-            .down
-                p.copyright copyright2022 bookclub 
+        .down
+            .container
+                .row 
+                    p.copyright copyright2022 bookclub 
                     .icon 
-                        a(href="#")
+                        a(href="#") 
                             img(src="public/images/icon_line.svg", alt="")
-                        a(href="#")
+                        a(href="#") 
                             img(src="public/images/icon_fb.svg", alt="")
-                        a(href="#")
+                        a(href="#") 
                             img(src="public/images/icon_ig.svg", alt="")
-                        a(href="#")
+                        a(href="#") 
                             img(src="public/images/icon_gmail.svg", alt="")
