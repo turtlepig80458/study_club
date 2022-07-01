@@ -283,7 +283,6 @@ dd > a {
   .down .row .icon {
     margin: 0 auto;
     display: block;
-    width: max-content;
   }
 
   .down p {
