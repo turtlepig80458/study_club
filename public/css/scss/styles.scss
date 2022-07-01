@@ -96,7 +96,7 @@ header>.container nav>ul>li>a {
 //  小於767px以下執行 start
 @media (max-width:767px) {
     header>.container .logo {
-        padding-top: 12px;
+        padding-top: 8px;
         width: 130px;
     }
 }
@@ -123,11 +123,14 @@ header>.container nav>ul>li>a {
 
     .icon-menu {
         display: block;
-        width: 15%;
+        // width: 10%;
         // background-color: yellow;
         color: $primary-color;
-        line-height: 60px; //header高?
-        text-align: center;
+        // line-height: 60px; //header高?
+    }
+    .icon-menu img{
+        width: 40px;
+        padding: 5px;
     }
 
     header {
@@ -302,7 +305,6 @@ section p {
 content{
     height: 100px;
     background-color: skyblue;
-    position: relative;
 } //沒用RRR
 contect img {
     width: 30%;
@@ -311,7 +313,8 @@ contect img {
 }
 
 contect .contect_word {
-    margin-top: 5%;
+    margin: auto 0;
+    // 上下/左右
 }
 
 // content .order{
@@ -319,11 +322,14 @@ contect .contect_word {
 //     justify-content: space-between;
 // }
 contect .order img{
-    width: 30%;
+    width: 10%;
 }
 contect .order p{
-    display: block;
-    width: 50%;
+    width: 80%;
+    // max-width: 80%;
+    margin: auto 0;
+    // font-size: 14pt;
+    // 字大小
 }
 contect p{
     width: 100%;
@@ -337,10 +343,7 @@ contect a{
     text-align: center;
     border-radius: 20px;
     color: white;
-
-    position: absolute;
-    left: 50%;
-    margin-left: -10%;
+    margin: 24px auto;
 }
 /*上右下左*/
 
@@ -350,14 +353,14 @@ contect a{
 footer{
     background-color: rgb(255, 255, 220);
 }
-// dt {
-//     font-size: 1.2em;
-//     margin-bottom: 10px;
-// }
+dt {
+    font-size: 1.2em;
+    margin: 10px auto;
+}
 
-// dd {
-//     margin-bottom: 4px;
-// }
+dd {
+    margin-bottom: 4px;
+}
 
 dd>a {
     color: black;
