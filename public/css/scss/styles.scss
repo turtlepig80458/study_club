@@ -31,6 +31,7 @@ body {
     flex-wrap: wrap; // 換行
     justify-content: space-between;
 }
+
 // ========================================================
 // 頁首區
 // ========================================================
@@ -62,9 +63,36 @@ header>.container nav>ul>li>a {
     font-size: 1.2em;
     letter-spacing: 2px;
 }
-header>.container .sign img{
-    width: 80px;
-    margin-left: 10px;
+
+// header>.container .sign img{
+//     width: 80px;
+//     margin-left: 10px;
+// }
+header>.container .sign {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header>.container .sign a {
+    width: 100px;
+    // height: 50px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50px;
+    margin-right: 10px;
+    // padding: 0 5px;
+    max-width: 100px;
+}
+
+header>.container .sign a.sign_in {
+    border: 2px solid $primary-color;
+    box-sizing: border-box;
+    color: $primary-color;
+}
+
+header>.container .sign a.sign_up {
+    background-color: #FF668B;
+    color: white;
 }
 
 // 三大頁面按鈕end
@@ -74,19 +102,23 @@ header>.container .sign img{
     header>.container>nav {
         width: 100%;
     }
+
     header>.container nav>ul {
         display: flex;
         justify-content: center;
     }
 
-    header>.container .row{
+    header>.container .row {
         align-items: center
     }
+
     header>.container .logo {
         padding-top: 5px;
         width: 180px;
     }
-} // 超過1008px以上執行 end
+}
+
+// 超過1008px以上執行 end
 
 //  小於1007px以下執行 start
 @media (max-width:1007px) {
@@ -94,13 +126,17 @@ header>.container .sign img{
         padding-top: 8px;
         width: 130px;
     }
-    header>.container .row{
+
+    header>.container .row {
         align-items: center
     }
-    header>.container .sign{
+
+    header>.container .sign {
         display: none;
     }
-} //  小於1007px以下執行 end
+}
+
+//  小於1007px以下執行 end
 
 
 // =======================================
@@ -111,20 +147,21 @@ header>.container .sign img{
     .icon-menu {
         display: none;
     }
-} // min-width 1008px end
+}
+
+// min-width 1008px end
+
+// .flex-space-between {
+//     justify-content: space-between;
+// } //不知道用途
 
 // 小於1007px以下執行 start
 @media (max-width:1007px) {
+
     .icon-menu {
+        // width: 15%;
         display: block;
-        // width: 10%;
-        // background-color: yellow;
-        color: $primary-color;
-        // line-height: 60px; //header高?
-    }
-    .icon-menu img{
-        width: 40px;
-        padding: 5px;
+        // line-height: 60px;
     }
 
     header {
@@ -132,41 +169,76 @@ header>.container .sign img{
     }
 
     header>.container nav {
-        position: absolute;
         width: 100%;
-        top: 60px;
-        // background-color: yellow;
+        position: absolute;
+        top: 52px;
+        background-color: blanchedalmond;
         // display: none;
+        // 需要蓋板的話打開以下程式碼
+        // position: fixed;
+        // top:0px;
+        // height: 100vh;
+        z-index: 999;
+
+        // 需要從上往下出現導覽時打開以下程式碼
+        // height:0px;
+        // overflow: hidden;
     }
 
     nav {
-        left: 0;
+        // viewport width
+        left: 0px;
         // 這一行等二層選單做完之後在打開
         left: -100vw;
-        transform: all 0.1s;
+        transition: all .3s;
     }
-} // 小於1007px以下執行 end
+
+    // 之後搭配javascript要改寫選取器的寫法
+    .icon-menu:hover+nav {
+        left: 0px;
+
+        // 需要從上往下出現導覽時打開以下程式碼
+        // height: 244px;
+    }
+
+    header>.container nav.active {
+        display: block;
+    }
+
+    header>.container nav>ul {
+        display: block;
+    }
+
+    header>.container nav>ul>li {
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid $primary-color;
+    }
+
+    header>.container nav>ul>li>a {
+        display: block;
+    }
+}
+
+// 小於1007px以下執行 end
 
 // ===================================
 // top_banner
 // ===================================
 
-// .top_banner img {
-//     // background-image: url(public/images/banner.png);
-//     width: 100%;
-// }
-
-picture .img_banner{
+picture .img_banner {
     width: 100%;
 }
 
-picture .img_banner{
+.banner {
     position: relative;
 }
-picture a{
+
+.banner a {
     display: block;
     width: 20%;
-    // line-height: 50px;
+    max-width: 300px;
+    min-width: 100px;
     padding: 10px;
     background-color: #FF668B;
     text-align: center;
@@ -178,6 +250,16 @@ picture a{
     left: 15%;
 }
 
+// 小於1007px以下執行 start
+@media (max-width:767px) {
+    .banner a {
+        position: absolute;
+        bottom: 8%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
 // =================================
 // section_獲得
 // =================================
@@ -186,10 +268,8 @@ section {
 }
 
 h3 {
-    // padding-top: 24px
     padding: 24px 0px;
     /*上右下左*/
-    
 }
 
 // 圖片相關樣式
@@ -225,37 +305,41 @@ h3 {
 @media (min-width:768px) {
     .col-lg-3 {
         width: calc(100% / 4 - 30px);
-        margin: 0px 15px 40px 15px;
+        margin: 0px 15px 0px 15px;
         /*上右下左*/
     }
-    
+
     .col-lg-4 {
         width: calc(100% / 3 - 30px);
-        margin: 0px 15px 40px 15px;
+        margin: 0px 15px 0px 15px;
         /*上右下左*/
     }
-} // min-width 768px end
+}
+
+// min-width 768px end
 
 // 小於767px以下執行 start
 @media (max-width:767px) {
     .col-md-6 {
         width: calc(100% / 2 - 30px);
-        margin: 0px 15px 40px 15px;
+        margin: 0px 15px 0px 15px;
         /*上右下左*/
     }
-    
+
     // .col-9 {
     //     width: calc(100% / 1.33333 - 30px);
     //     margin: 0px 15px 40px 15px;
     //     /*上右下左*/
     // }
-    
+
     // .col-sm-12 {
     //     width: calc(100% / 1 - 30px);
     //     margin: 0px 15px 40px 15px;
     //     /*上右下左*/
     // }
-} // 小於767px以下執行 end
+}
+
+// 小於767px以下執行 end
 
 // 小於428px以下執行 start
 // @media (max-width:428px) {
@@ -279,17 +363,25 @@ section a {
     color: black;
 }
 
-// ===================================
-// contect共用
-// ===================================
-
-contect p{
-    width: 100%;
+section a.btn {
+    display: block;
+    background-color: #FF668B;
+    color: white;
+    width: 10%;
+    max-width: 200px;
+    min-width: 100px;
+    height: 20%;
+    padding: 10px;
+    line-height: 15px;
+    border-radius: 20px;
+    // margin: auto;
 }
-contect a{
-    display:block;
+
+section a.bigbtn {
+    display: block;
     width: 20%;
-    // line-height: 50px;
+    max-width: 300px;
+    min-width: 100px;
     padding: 10px;
     background-color: #FF668B;
     text-align: center;
@@ -297,46 +389,76 @@ contect a{
     color: white;
     margin: 24px auto;
 }
+
+// ===================================
+// contect共用
+// ===================================
+
+contect p {
+    width: 100%;
+}
+
+contect a {
+    display: block;
+    width: 20%;
+    max-width: 300px;
+    min-width: 100px;
+    padding: 10px;
+    background-color: #FF668B;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    margin: 24px auto;
+}
+
 /*上右下左*/
 
 // ===================================
 // contect_心得回饋
 // ===================================
-contect .row{
+contect .row {
     margin: 0 0 24px 0;
 }
-contect .row .order{
+
+contect .row .order {
     align-items: center
 }
-contect .order img{
+
+contect .order img {
     width: 10%;
 }
-contect .order p{
+
+contect .order p {
     width: 80%;
     // max-width: 80%;
     margin: auto 0;
     // font-size: 14pt;
     // 字大小
 }
+
 // ===================================
 // contect_書聚記錄
 // ===================================
 
 // 768px以上 start
-@media(min-width:768px){
+@media(min-width:768px) {
     contect img {
         width: 30%;
     }
-} // 768px以上 end
+}
+
+// 768px以上 end
 
 // 767px以下 start
-@media(max-width:767px){
+@media(max-width:767px) {
     contect img {
         width: 100%;
         // margin: 20px 0 0 0;
         /*上右下左*/
     }
-} // 767px以下 end
+}
+
+// 767px以下 end
 
 contect .contect_word {
     margin: auto 0;
@@ -347,9 +469,10 @@ contect .contect_word {
 // =================================
 // footer
 // =================================
-footer{
+footer {
     background-color: rgb(255, 255, 220);
 }
+
 dt {
     font-size: 1.2em;
     margin: 10px auto;
@@ -363,34 +486,44 @@ dd>a {
     color: black;
 }
 
-.down{
+.down {
     background-color: rgb(255, 255, 155);
+    padding: 10px;
 }
-.down .row{
+
+.down .row {
     align-items: center
 }
-.down .icon{
-    margin: 10px 0;
+
+.down .icon {
+    margin: 10px 0 0 0;
 }
-.down a{
+
+.down a {
     margin: 0 10px;
 }
 
-@media (max-width:767px) {    
-    .down .row{
-        margin: 10 auto;
+@media (max-width:767px) {
+    .down .row {
         display: block;
-    } //怪
-    .down .row .icon{
-        margin: 0 auto;
-        display: block;
+        // margin: 10 auto;
+        // display: flex;
+        flex-wrap: wrap;
+    }
+
+    //怪
+    .down .row .icon {
+        display: flex;
+        justify-content: center;
+        // margin: 0 auto;
         // width: max-content;
-    } //怪
-    .down p{
+    }
+
+    .down p {
         text-align: center
     }
-    // .down .icon img{
-    //     width: 32px;
-    // }
+
+    .down .icon img {
+        width: 32px;
+    }
 }
-    

@@ -10,31 +10,31 @@ head
 body 
     header 
         .container
-            .row
+            .row.flex-space-between
                 .logo  
                     a(href='index.html')
                         img(src='public/images/logo.svg' alt='')
+                a.icon-menu(href="#") 
+                    img(src="public/images/icon_Menu.svg", alt="")
                 nav
                     ul 
                         li
-                            a(href="#") 圖書館
+                            a(href="library.html") 圖書館
                         li
-                            a(href="#") 讀書會
+                            a(href="bookclub.html") 讀書會
                         li
-                            a(href="#") 我的書房
-                a.icon-menu(href="#") 
-                    img(src="public/images/icon_Menu.svg", alt="")
+                            a(href="study.html") 我的書房
                 .sign
-                    a(href="#")
-                        img(src="public/images/btn_sign in.svg", alt="")
-                    a(href="#")
-                        img(src="public/images/btn_sign up.svg", alt="")
+                    a.sign_in(href="#") 登入
+                        //- img(src="public/images/btn_sign in.svg", alt="")
+                    a.sign_up(href="#") 註冊
+                        //- img(src="public/images/btn_sign up.svg", alt="")
     //- header end 
-    picture 
-        source
-    .top_banner
-        img(src="public/images/banner.png", alt="")
-        a(href="#") 加入我們
+    .banner 
+        picture
+            source(media='(min-width:768px)' srcset='public/images/banner_pc.png')
+            img.img_banner(src='public/images/banner_phone.png' alt='')
+        a.btn(href='#') 加入我們
 
     //- content start
     section 
@@ -73,18 +73,23 @@ body
                     img(src="public/images/book_back.png", alt="")
                     h4 逆向工程
                     p 主揪：丹丹
+                    a.btn(href="#") 更多資訊
                 a.col-sm-12.col-md-6.col-lg-3(href="#")
                     img(src="public/images/book_think.png", alt="")
                     h4 火箭科學家
                     p 主揪：Marty
+                    a.btn(href="#") 更多資訊
                 a.col-sm-12.col-md-6.col-lg-3(href="#")
                     img(src="public/images/book_talk.png", alt="")
                     h4 溝通的方法
                     p 主揪：Gimmy
+                    a.btn(href="#") 更多資訊
                 a.col-sm-12.col-md-6.col-lg-3(href="#")
                     img(src="public/images/book_habit.png", alt="")
                     h4 原子習慣
                     p 主揪：彥成
+                    a.btn(href="#") 更多資訊
+            a.bigbtn(href="#") 更多讀書會
     contect   
         .container 
             h3.text-center 書聚記錄

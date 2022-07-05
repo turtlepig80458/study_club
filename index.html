@@ -9,25 +9,24 @@
 <body> 
   <header> 
     <div class="container">
-      <div class="row">
-        <div class="logo"> <a href="index.html"><img src="public/images/logo.svg" alt=""></a></div>
+      <div class="row flex-space-between">
+        <div class="logo"> <a href="index.html"><img src="public/images/logo.svg" alt=""></a></div><a class="icon-menu" href="#"> <img src="public/images/icon_Menu.svg" alt=""></a>
         <nav>
           <ul> 
-            <li><a href="#">圖書館</a></li>
-            <li><a href="#">讀書會</a></li>
-            <li><a href="#">我的書房</a></li>
+            <li><a href="library.html">圖書館</a></li>
+            <li><a href="bookclub.html">讀書會</a></li>
+            <li><a href="study.html">我的書房</a></li>
           </ul>
-        </nav><a class="icon-menu" href="#"> <img src="public/images/icon_Menu.svg" alt=""></a>
-        <div class="sign"><a href="#"><img src="public/images/btn_sign in.svg" alt=""></a><a href="#"><img src="public/images/btn_sign up.svg" alt=""></a></div>
+        </nav>
+        <div class="sign"><a class="sign_in" href="#">登入</a><a class="sign_up" href="#">註冊</a></div>
       </div>
     </div>
   </header>
-  <picture> 
-    <source media="(min-width:768px)" srcset="public/images/banner_pc.png" >
-      <img class="img_banner" src="public/images/banner_phone.png" alt="">
-      <a href="#">加入我們</a>
-  </picture>
-  <!-- <div class="top_banner"><img src="public/images/banner.png" alt=""><a href="#">加入我們</a></div> -->
+  <div class="banner"> 
+    <picture>
+      <source media="(min-width:768px)" srcset="public/images/banner_pc.png"><img class="img_banner" src="public/images/banner_phone.png" alt="">
+    </picture><a class="btn" href="#">加入我們</a>
+  </div>
   <section> 
     <div class="container">
       <h3 class="text-center">透過讀書會，你可以...</h3>
@@ -66,13 +65,13 @@
       <h3 class="text-center">加入讀書會</h3>
       <div class="row text-center"> <a class="col-sm-12 col-md-6 col-lg-3" href="#"><img src="public/images/book_back.png" alt="">
           <h4>逆向工程</h4>
-          <p>主揪：丹丹</p></a><a class="col-sm-12 col-md-6 col-lg-3" href="#"><img src="public/images/book_think.png" alt="">
+          <p>主揪：丹丹</p><a class="btn" href="#">更多資訊</a></a><a class="col-sm-12 col-md-6 col-lg-3" href="#"><img src="public/images/book_think.png" alt="">
           <h4>火箭科學家</h4>
-          <p>主揪：Marty</p></a><a class="col-sm-12 col-md-6 col-lg-3" href="#"><img src="public/images/book_talk.png" alt="">
+          <p>主揪：Marty</p><a class="btn" href="#">更多資訊</a></a><a class="col-sm-12 col-md-6 col-lg-3" href="#"><img src="public/images/book_talk.png" alt="">
           <h4>溝通的方法</h4>
-          <p>主揪：Gimmy</p></a><a class="col-sm-12 col-md-6 col-lg-3" href="#"><img src="public/images/book_habit.png" alt="">
+          <p>主揪：Gimmy</p><a class="btn" href="#">更多資訊</a></a><a class="col-sm-12 col-md-6 col-lg-3" href="#"><img src="public/images/book_habit.png" alt="">
           <h4>原子習慣</h4>
-          <p>主揪：彥成</p></a></div>
+          <p>主揪：彥成</p><a class="btn" href="#">更多資訊</a></a></div><a class="bigbtn" href="#">更多讀書會</a>
     </div>
   </section>
   <contect>  
