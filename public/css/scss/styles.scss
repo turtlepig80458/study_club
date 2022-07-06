@@ -268,8 +268,17 @@ section {
 }
 
 h3 {
+    text-align: center;
     padding: 24px 0px;
     /*上右下左*/
+}
+
+section p {
+    text-align: center;
+}
+
+section p.below {
+    padding: 0px 0px 24px 0px;
 }
 
 // 圖片相關樣式
@@ -349,6 +358,7 @@ h3 {
         /*上右下左*/
     }
 }
+
 // 小於428px以下執行 end
 
 // ==================================
@@ -364,7 +374,7 @@ section a {
     color: black;
 }
 
-section .group{
+section .group {
     background-color: #fff;
     margin: 15px auto;
     border-radius: 5px;
@@ -476,7 +486,7 @@ contect .contect_word {
 // footer
 // =================================
 footer {
-    background-color: rgb(255, 255, 220);
+    background-color: #00adaa25;
 }
 
 dt {
@@ -493,7 +503,7 @@ dd>a {
 }
 
 .down {
-    background-color: rgb(255, 255, 155);
+    background-color: $primary-color;
     padding: 10px;
 }
 
@@ -532,4 +542,208 @@ dd>a {
     .down .icon img {
         width: 32px;
     }
+}
+
+// ==============================================================================
+// bookclub分頁-search搜尋框
+// ==============================================================================
+.box {
+    margin: 100px auto;
+    width: 300px;
+    height: 50px;
+}
+
+.container-1 {
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+
+.container-1 input#search {
+    width: 300px;
+    height: 50px;
+    background: #2b303b;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #63717f;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+  .container-1 input#search::-webkit-input-placeholder {
+    color: #65737e;
+ }
+
+ .container-1 input#search:-moz-placeholder { /* Firefox 18- */
+    color: #65737e;  
+ }
+
+ .container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+    color: #65737e;  
+ }
+
+ .container-1 input#search:-ms-input-placeholder {  
+    color: #65737e;  
+ }
+ .container-1 .icon{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #4f5b66;
+  }
+
+  .container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
+    outline:none;
+    background: #ffffff;
+  }
+
+  .container-1 input#search{
+    width: 300px;
+    height: 50px;
+    background: #2b303b;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #262626;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+
+      -webkit-transition: background .55s ease;
+    -moz-transition: background .55s ease;
+    -ms-transition: background .55s ease;
+    -o-transition: background .55s ease;
+    transition: background .55s ease;
+  }
+
+//   ========================================================
+.container-4 {
+    overflow: hidden;
+    width: 350px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.container-4 input#search {
+    width: 350px;
+    height: 50px;
+    background: #2b303b;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #fff;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+// .container-4 input#search::-webkit-input-placeholder {
+//     color: #65737e;
+// }
+
+// .container-4 input#search:-moz-placeholder {
+//     /* Firefox 18- */
+//     color: #65737e;
+// }
+
+// .container-4 input#search::-moz-placeholder {
+//     /* Firefox 19+ */
+//     color: #65737e;
+// }
+
+// .container-4 input#search:-ms-input-placeholder {
+//     color: #65737e;
+// }
+
+.container-4 button.icon {
+    // -webkit-border-top-right-radius: 5px;
+    // -webkit-border-bottom-right-radius: 5px;
+    // -moz-border-radius-topright: 5px;
+    // -moz-border-radius-bottomright: 5px;
+    // border-top-right-radius: 5px;
+    // border-bottom-right-radius: 5px;
+
+    border: none;
+    // background: #232833;
+    height: 50px;
+    width: 50px;
+    color: #4f5b66;
+    // opacity: 0;
+    font-size: 10pt;
+
+    // -webkit-transition: all .55s ease;
+    // -moz-transition: all .55s ease;
+    // -ms-transition: all .55s ease;
+    // -o-transition: all .55s ease;
+    // transition: all .55s ease;
+}
+
+.container-4:hover button.icon,
+.container-4:active button.icon,
+.container-4:focus button.icon {
+    outline: none;
+    opacity: 1;
+    margin-left: -50px;
+}
+
+// .container-4:hover button.icon:hover {
+//     background: white;
+// }
+
+//   ==================================================================
+
+* {
+    box-sizing: border-box;
+}
+
+// .wrap.search a {
+//     text-decoration: none;
+//     color: black;
+// }
+
+// .wrap {
+//     max-width: 600px;
+//     margin: 20px auto;
+//     // height: auto;
+// }
+
+.search {
+    width: 60%;
+    max-width: 1000px;
+    margin: 20px auto;
+    position: relative;
+    width: 80%;
+    // float: left;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 100%;
+    height: 32px;
+    // font-size: 20px;
+    border: none;
+    background-color:rgb(255, 255, 220);
+}
+
+.search-btn {
+    width: 36px;
+    height: 32px;
+    background-color: rgb(255, 255, 130);
+    color: black;
+    // outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
 }

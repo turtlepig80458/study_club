@@ -6,7 +6,7 @@ head
   title 書箱視家
   link(rel='stylesheet' href='public/css/styles.css')
 
-//- header start
+//- header start ------------------------------------------------------
 body 
     header 
         .container
@@ -25,11 +25,9 @@ body
                         li
                             a(href="study.html") 我的書房
                 .sign
-                    a(href="#")
-                        img(src="public/images/btn_sign in.svg", alt="")
-                    a(href="#")
-                        img(src="public/images/btn_sign up.svg", alt="")
-    //- header end 
+                    a.sign_in(href="#") 登入
+                    a.sign_up(href="#") 註冊
+    //- header end --------------------------------------------------------
     .banner 
         picture
             source(media='(min-width:768px)' srcset='public/images/banner_pc.png')
