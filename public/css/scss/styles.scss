@@ -261,7 +261,7 @@ picture .img_banner {
 }
 
 // =================================
-// section_獲得
+// section_共用_獲得
 // =================================
 section {
     background-color: rgb(255, 255, 220);
@@ -342,13 +342,13 @@ h3 {
 // 小於767px以下執行 end
 
 // 小於428px以下執行 start
-// @media (max-width:428px) {
-//     .col-sm-12 {
-//         width: calc(100% / 1 - 30px);
-//         margin: 0px 15px 40px 15px;
-//         /*上右下左*/
-//     }
-// }
+@media (max-width:428px) {
+    .col-sm-12 {
+        width: calc(100% / 1 - 30px);
+        margin: 0px 15px 40px 15px;
+        /*上右下左*/
+    }
+}
 // 小於428px以下執行 end
 
 // ==================================
@@ -357,24 +357,30 @@ h3 {
 
 section img {
     width: 50%;
+    padding: 10px;
 }
 
 section a {
     color: black;
 }
 
-section a.btn {
+section .group{
+    background-color: #fff;
+    margin: 15px auto;
+    border-radius: 5px;
+}
+
+section p.morebtn {
     display: block;
     background-color: #FF668B;
     color: white;
     width: 10%;
     max-width: 200px;
     min-width: 100px;
-    height: 20%;
     padding: 10px;
     line-height: 15px;
     border-radius: 20px;
-    // margin: auto;
+    margin: 10px auto;
 }
 
 section a.bigbtn {
