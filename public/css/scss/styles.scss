@@ -52,7 +52,7 @@ body {
 
 header>.container nav>ul>li {
     // margin-right: 40px;
-    margin-left: 40px;
+    // margin-left: 40px;
     // padding-top: 10px;
     text-align: center;
 }
@@ -64,36 +64,36 @@ header>.container nav>ul>li>a {
     letter-spacing: 2px;
 }
 
-// header>.container .sign img{
-//     width: 80px;
-//     margin-left: 10px;
+// // header>.container .sign img{
+// //     width: 80px;
+// //     margin-left: 10px;
+// // }
+// header>.container .sign {
+//     display: flex;
+//     flex-wrap: wrap;
 // }
-header>.container .sign {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-header>.container .sign a {
-    width: 100px;
-    // height: 50px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50px;
-    margin-right: 10px;
-    // padding: 0 5px;
-    max-width: 100px;
-}
+// header>.container .sign a {
+//     width: 100px;
+//     // height: 50px;
+//     line-height: 40px;
+//     text-align: center;
+//     border-radius: 50px;
+//     margin-right: 10px;
+//     // padding: 0 5px;
+//     max-width: 100px;
+// }
 
-header>.container .sign a.sign_in {
-    border: 2px solid $primary-color;
-    box-sizing: border-box;
-    color: $primary-color;
-}
+// header>.container .sign a.sign_in {
+//     border: 2px solid $primary-color;
+//     box-sizing: border-box;
+//     color: $primary-color;
+// }
 
-header>.container .sign a.sign_up {
-    background-color: #FF668B;
-    color: white;
-}
+// header>.container .sign a.sign_up {
+//     background-color: #FF668B;
+//     color: white;
+// }
 
 // 三大頁面按鈕end
 
@@ -115,6 +115,43 @@ header>.container .sign a.sign_up {
     header>.container .logo {
         padding-top: 5px;
         width: 180px;
+    }
+    .phone_sign{
+        display: none;
+    }
+    // ===========================原共用======================
+    header>.container nav>ul>li {
+        // margin-right: 40px;
+        margin-left: 40px;
+        // padding-top: 10px;
+        // text-align: center;
+    }
+    
+    header>.container .sign {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    header>.container .sign a {
+        width: 100px;
+        // height: 50px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50px;
+        margin-right: 10px;
+        // padding: 0 5px;
+        max-width: 100px;
+    }
+    
+    header>.container .sign a.sign_in {
+        border: 2px solid $primary-color;
+        box-sizing: border-box;
+        color: $primary-color;
+    }
+    
+    header>.container .sign a.sign_up {
+        background-color: #FF668B;
+        color: white;
     }
 }
 
