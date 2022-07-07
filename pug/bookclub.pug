@@ -19,20 +19,25 @@ body
                     img(src="public/images/icon_Menu.svg", alt="")
                 nav
                     ul 
+                        li.phone_sign 
+                            a(href="sign_up.html") 註冊
+                        li.phone_sign 
+                            a(href="sign_in.html") 登入
                         li
                             a(href="library.html") 圖書館
                         li
                             a(href="bookclub.html") 讀書會
                         li
                             a(href="study.html") 我的書房
+                        
                 .sign
                     a.sign_in(href="#") 登入
                     a.sign_up(href="#") 註冊
     //- header end --------------------------------------------------------
     .banner 
         picture
-            source(media='(min-width:768px)' srcset='public/images/banner_pc.png')
-            img.img_banner(src='public/images/banner_phone.png' alt='')
+            source(media='(min-width:768px)' srcset='public/images/bookclub_pc.png')
+            img.img_banner(src='public/images/bookclub_phone.png' alt='')
         a(href='#') 我要揪團
     //- search start -----------------------------------------------------------------
     .box
