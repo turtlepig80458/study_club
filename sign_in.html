@@ -6,9 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>登入｜書箱視家</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  <link rel="stylesheet" href="public/css/styles.css">
+  
+  <!-- icon連結 -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
   <style>
     * {
       margin: 0;
@@ -16,18 +20,25 @@
       box-sizing: border-box;
     }
 
-    section.form {
-      background-color: lightgray;
-      padding-top: 80px;
-      padding-bottom: 80px;
+    main.form {
+      /* background-color: lightgray; */
+      padding: 80px 0;
     }
 
-    .container {
-      width: 90%;
+    .container_new {
+      background-color: lightgray;
+      width: 80%;
       max-width: 600px;
       margin: auto;
+      padding: 40px 80px;
 
     }
+
+    /* .container {
+    margin: auto;
+    width: 85%;
+    max-width: 1600px;
+} */
 
     .headline{
       display: flex;
@@ -38,7 +49,10 @@
       display: flex;
       justify-content: space-between;
     }
-
+    .situation{
+      display: flex;
+      justify-content: space-between;
+    }
     .icon-fb,
     .icon-google {
       width: 48%;
@@ -50,12 +64,17 @@
       margin-bottom: 5px;
       color: black;
       background-color: white;
-
     }
-    .form img{
+
+    /* 沒反應 */
+    main .social-icon-group img{
+      width: 15px;
+    } 
+    main img.icon_size{
       width: 15px;
     }
-    p{
+    /* 沒反應 */
+    main .container_new p{
       margin: 10px 0;
     }
     /* .icon-google {
@@ -83,8 +102,27 @@
 </head>
 
 <body>
-  <section class="form">
+  <!-- header start ==================================================================== -->
+  <header> 
     <div class="container">
+      <div class="row flex-space-between">
+        <div class="logo"> <a href="index.html"><img src="public/images/logo.svg" alt=""></a></div><a class="icon-menu" href="#"> <img src="public/images/icon_Menu.svg" alt=""></a>
+        <nav>
+          <ul> 
+            <li class="phone_sign"><a href="sign_up.html">註冊</a></li>
+            <li class="phone_sign"><a href="sign_in.html">登入</a></li>
+            <li><a href="library.html">圖書館</a></li>
+            <li><a href="bookclub.html">讀書會</a></li>
+            <li><a href="study.html">我的書房</a></li>
+          </ul>
+        </nav>
+        <div class="sign"><a class="sign_in" href="#">登入</a><a class="sign_up" href="#">註冊</a></div>
+      </div>
+    </div>
+  </header>
+  <!-- header end ==================================================================== -->
+  <main class="form">
+    <div class="container_new">
       <div class="headline">
         <h1>登入</h1>
         <p>沒有帳號?<a href="#">馬上註冊</a></p>
@@ -92,18 +130,23 @@
       <!-- 社群媒體登入 -->
       <p>使用社群帳號登入</p>
       <div class="social-icon-group">
-        <a class="icon-google" href="javascript:;" target="_blank"><img src="public/images/icon_google.svg" alt="">使用 google 登入</a>
-        <a class="icon-fb" href="javascript:;" target="_blank"><img src="public/images/icon_facebook.svg" alt=""> 使用 facebook 登入</a>
+        <a class="icon-google" href="javascript:;" target="_blank"><img class="icon_size" src="public/images/icon_google.svg" alt="">google 登入</a>
+        <a class="icon-fb" href="javascript:;" target="_blank"><img class="icon_size" src="public/images/icon_facebook.svg" alt=""> facebook 登入</a>
       </div>
       <!-- 表單 start -->
       <form class="action" action="">
         <!-- 帳號密碼 -->
-        <p>使用書鄉視家帳號登入</p>
+        <p>使用書箱視家帳號登入</p>
         <label for="account">帳號</label>
         <input class="input-width" type="text" name="account" id="account" placeholder="請輸入帳號">
         <label for="password">密碼</label>
         <input class="input-width" type="password" name="password" id="password" placeholder="請輸入密碼">
 
+        <!-- checkbox -->
+        <div class="situation">
+          <div><input type="checkbox" id="myCheck">記住帳號密碼</div>
+          <a href="#">忘記密碼</a>
+        </div>
         <!-- 送出按鈕 -->
         <input class="btn-primary input-width" type="submit" value="登入">
 
@@ -111,7 +154,41 @@
 
       <!-- 表單 end  -->
     </div>
-  </section>
+  </main>
+  <!-- footer start ============================================================================ -->
+  <footer> 
+    <div class="container">
+      <div class="row"> 
+        <dl class="col-lg-4 text-center">
+          <dt>關於我們</dt>
+          <dd><a href="#">平台介紹</a></dd>
+          <dd><a href="#">服務條款</a></dd>
+          <dd><a href="#">商業合作</a></dd>
+          <dd><a href="#">意見回饋</a></dd>
+          <dd><a href="#">聯絡我們</a></dd>
+        </dl>
+        <dl class="col-lg-4 text-center">
+          <dt>使用須知</dt>
+          <dd><a href="#">如何開始</a></dd>
+          <dd><a href="#">進行方式</a></dd>
+          <dd><a href="#">書聚指南</a></dd>
+        </dl>
+        <dl class="col-lg-4 text-center">
+          <dt>常見問題</dt>
+          <dd><a href="#">注意事項</a></dd>
+          <dd><a href="#">FAQ問答</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div class="down">
+      <div class="container">
+        <div class="row"> 
+          <p class="copyright">copyright2022 bookclub </p>
+          <div class="icon"> <a href="#"> <img src="public/images/icon_line.svg" alt=""></a><a href="#"> <img src="public/images/icon_fb.svg" alt=""></a><a href="#"> <img src="public/images/icon_ig.svg" alt=""></a><a href="#"> <img src="public/images/icon_gmail.svg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
