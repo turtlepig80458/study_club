@@ -8,30 +8,7 @@ head
 
 //- header start ------------------------------------------------------
 body 
-    header 
-        .container
-            .row.flex-space-between
-                .logo  
-                    a(href='index.html')
-                        img(src='public/images/logo.svg' alt='')
-                a.icon-menu(href="#") 
-                    img(src="public/images/icon_Menu.svg", alt="")
-                nav
-                    ul 
-                        li.phone_sign 
-                            a(href="sign_up.html") 註冊
-                        li.phone_sign 
-                            a(href="sign_in.html") 登入
-                        li
-                            a(href="library.html") 圖書館
-                        li
-                            a(href="bookclub.html") 讀書會
-                        li
-                            a(href="study.html") 我的書房
-                        
-                .sign
-                    a.sign_in(href="sign_in.html") 登入
-                    a.sign_up(href="sign_up.html") 註冊
+    include header.pug
     //- header end --------------------------------------------------------
     .banner 
         picture

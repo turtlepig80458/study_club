@@ -159,6 +159,7 @@ header > .container nav > ul > li > a {
 }
 picture .img_banner {
   width: 100%;
+  vertical-align: top;
 }
 
 .banner {
@@ -445,4 +446,13 @@ dd > a {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.sllick img {
+  margin: auto;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: #FF668B;
+  opacity: 1;
 }

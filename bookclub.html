@@ -5,22 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>讀書會｜書箱視家</title>
   <link rel="stylesheet" href="public/css/styles.css"><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <!-- slick css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <!-- slick theme css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-  <style>
-
-    .sllick img {
-      margin: auto;
-    }
-
-    .slick-next:before, .slick-prev:before {
-      color: #FF668B;
-      opacity: 1;
-    }
-
-  </style>
 </head>
 <body> 
   <header> 
@@ -51,59 +35,22 @@
       <button class="search-btn"><i class="fa fa-search"></i></button>
     </div>
   </div>
-  <section>
-    <div class="container">
+  <section> 
+    <div class="container"> 
       <h3>加入讀書會</h3>
-      <div class="row text-center sllick">
-        <a class="col-sm-12 col-md-6 col-lg-3 group" href="#">
-          <img src="public/images/book_back.png" alt="">
+      <div class="row text-center"> <a class="col-sm-12 col-md-6 col-lg-3 group" href="#"><img src="public/images/book_back.png" alt="">
           <h4>逆向工程</h4>
           <p>主揪：丹丹</p>
-          <p class="morebtn">更多資訊</p>
-        </a>
-        <a class="col-sm-12 col-md-6 col-lg-3 group" href="#">
-          <img src="public/images/book_think.png" alt="">
+          <p class="morebtn">更多資訊</p></a><a class="col-sm-12 col-md-6 col-lg-3 group" href="#"><img src="public/images/book_think.png" alt="">
           <h4>火箭科學家</h4>
           <p>主揪：Marty</p>
-          <p class="morebtn">更多資訊</p>
-        </a>
-        <a class="col-sm-12 col-md-6 col-lg-3 group" href="#">
-          <img src="public/images/book_talk.png" alt="">
+          <p class="morebtn">更多資訊</p></a><a class="col-sm-12 col-md-6 col-lg-3 group" href="#"><img src="public/images/book_talk.png" alt="">
           <h4>溝通的方法</h4>
           <p>主揪：Gimmy</p>
-          <p class="morebtn">更多資訊</p>
-        </a>
-        <a class="col-sm-12 col-md-6 col-lg-3 group" href="#">
-          <img src="public/images/book_habit.png" alt="">
+          <p class="morebtn">更多資訊</p></a><a class="col-sm-12 col-md-6 col-lg-3 group" href="#"><img src="public/images/book_habit.png" alt="">
           <h4>原子習慣</h4>
           <p>主揪：彥成</p>
-          <p class="morebtn">更多資訊</p>
-        </a>
-        <a class="col-sm-12 col-md-6 col-lg-3 group" href="#">
-          <img src="public/images/book_back.png" alt="">
-          <h4>逆向工程</h4>
-          <p>主揪：丹丹</p>
-          <p class="morebtn">更多資訊</p>
-        </a>
-        <a class="col-sm-12 col-md-6 col-lg-3 group" href="#">
-          <img src="public/images/book_think.png" alt="">
-          <h4>火箭科學家</h4>
-          <p>主揪：Marty</p>
-          <p class="morebtn">更多資訊</p>
-        </a>
-        <a class="col-sm-12 col-md-6 col-lg-3 group" href="#">
-          <img src="public/images/book_talk.png" alt="">
-          <h4>溝通的方法</h4>
-          <p>主揪：Gimmy</p>
-          <p class="morebtn">更多資訊</p>
-        </a>
-        <a class="col-sm-12 col-md-6 col-lg-3 group" href="#">
-          <img src="public/images/book_habit.png" alt="">
-          <h4>原子習慣</h4>
-          <p>主揪：彥成</p>
-          <p class="morebtn">更多資訊</p>
-        </a>
-      </div><a class="bigbtn" href="#">更多讀書會</a>
+          <p class="morebtn">更多資訊</p></a></div><a class="bigbtn" href="#">更多讀書會</a>
     </div>
   </section>
   <footer> 
@@ -139,33 +86,4 @@
       </div>
     </div>
   </footer>
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <!-- slick js -->
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!-- 自定義 js -->
-  <script>
-    $(document).ready(function(){
-      // 多張點選切換
-      $('.sllick').slick({
-        slidesToShow: 4,
-        slidesToScroll: 4
-      });
-
-      var filtered = false;
-
-      $('.js-filter').on('click', function () {
-        if (filtered === false) {
-          $('.filtering').slick('slickFilter', ':even');
-          $(this).text('Unfilter Slides');
-          filtered = true;
-        } else {
-          $('.filtering').slick('slickUnfilter');
-          $(this).text('Filter Slides');
-          filtered = false;
-        }
-      });
-    });
-    
-  </script>
 </body>
