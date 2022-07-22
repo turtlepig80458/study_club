@@ -147,11 +147,15 @@ header>.container nav>ul>li>a {
     header>.container .sign a.sign_in {
         border: 2px solid $primary-color;
         box-sizing: border-box;
+        line-height: 42px;
+        //按鈕不同高度暫時處理方法
         color: $primary-color;
     }
     
     header>.container .sign a.sign_up {
         background-color: #FF668B;
+        line-height: 45px;
+        //按鈕不同高度暫時處理方法
         color: white;
     }
 }
@@ -308,6 +312,12 @@ section {
     padding: 24px 0px
 }
 
+h2 {
+    //暫時改
+    text-align: center;
+    padding:0 0 12px 0px;
+    /*上右下左*/
+}
 h3 {
     text-align: center;
     // padding:24px 0px;

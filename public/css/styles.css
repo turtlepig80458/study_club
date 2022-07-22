@@ -85,11 +85,13 @@ header > .container nav > ul > li > a {
   header > .container .sign a.sign_in {
     border: 2px solid #00ADA9;
     box-sizing: border-box;
+    line-height: 42px;
     color: #00ADA9;
   }
 
   header > .container .sign a.sign_up {
     background-color: #FF668B;
+    line-height: 45px;
     color: white;
   }
 }
@@ -192,6 +194,12 @@ picture .img_banner {
 section {
   background-color: #ffffdc;
   padding: 24px 0px;
+}
+
+h2 {
+  text-align: center;
+  padding: 0 0 12px 0px;
+  /*上右下左*/
 }
 
 h3 {
