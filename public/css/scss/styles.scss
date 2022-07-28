@@ -120,6 +120,9 @@ header>.container nav>ul>li>a {
     .phone_sign{
         display: none;
     }
+    .phone_personal{
+        display: none;
+    }
     // ===========================原共用======================
     header>.container nav>ul>li {
         // margin-right: 40px;
@@ -158,6 +161,13 @@ header>.container nav>ul>li>a {
         //按鈕不同高度暫時處理方法
         color: white;
     }
+    header>.container .personal a.bell {
+        padding: 8px;
+    }
+    
+    header>.container .personal a.user {
+        padding: 8px;
+    }
 }
 
 // 超過1008px以上執行 end
@@ -173,7 +183,7 @@ header>.container nav>ul>li>a {
         align-items: center
     }
 
-    header>.container .sign {
+    header>.container .personal {
         display: none;
     }
 }
@@ -312,15 +322,15 @@ section {
     padding: 24px 0px
 }
 
-h2 {
-    //暫時改
-    text-align: center;
-    padding:0 0 12px 0px;
-    /*上右下左*/
-}
+// h2 {
+//     //暫時改
+//     text-align: center;
+//     padding:0 0 12px 0px;
+//     /*上右下左*/
+// }
 h3 {
     text-align: center;
-    // padding:24px 0px;
+    padding:0 0 24px 0px;
     /*上右下左*/
 }
 
