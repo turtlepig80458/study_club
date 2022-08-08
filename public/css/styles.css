@@ -120,6 +120,10 @@ header > .container nav > ul > li > a {
   header > .container .personal {
     display: none;
   }
+
+  header .sign {
+    display: none;
+  }
 }
 @media (min-width: 1008px) {
   .icon-menu {
@@ -149,7 +153,7 @@ header > .container nav > ul > li > a {
     transition: all 0.3s;
   }
 
-  .icon-menu:hover + nav {
+  .showMenu {
     left: 0px;
   }
 
@@ -208,7 +212,7 @@ section {
   padding: 24px 0px;
 }
 
-h3 {
+.container > h3 {
   text-align: center;
   padding: 0 0 24px 0px;
   /*上右下左*/
@@ -462,6 +466,310 @@ dd > a {
   right: 0;
 }
 
+/*左邊區塊*/
+.left_content {
+  width: 250px;
+  background-color: #ffffdc;
+  padding: 10px;
+}
+
+.study_box {
+  padding: 5px 10px;
+  border-bottom: 1.5px solid #00ADA9;
+}
+
+.study_box:last-child {
+  border-bottom: 0px;
+}
+
+.study_box .img_box img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #CCC;
+}
+
+.study_box .profile {
+  display: flex;
+}
+
+.study_box .profile .imgBox {
+  background-color: white;
+  width: 100px;
+  display: block;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.study_box .profile .imgBox img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: block;
+}
+
+.study_box .profile .info {
+  display: grid;
+  justify-content: space-around;
+}
+
+.study_box .profile .info img {
+  width: 15px;
+  height: 15px;
+}
+
+.study_box .profile .money img {
+  width: 24px;
+  height: 24px;
+}
+
+.study_box .lv_info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.study_box progress {
+  width: 100%;
+}
+
+.study_box .study_box_title {
+  text-align: center;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+
+.study_box .img_box {
+  margin: 10px 0px;
+}
+
+.study_box .task_box {
+  margin: 0px auto;
+}
+
+.study_box .task_box .task {
+  display: block;
+  width: 220px;
+  margin: 0 auto 5px auto;
+  background-color: white;
+  padding: 5px 10px;
+}
+
+.study_box .task_box .task .task_type {
+  padding: 2px 5px;
+  background-color: #CCC;
+}
+
+/*右邊區塊*/
+.right_content {
+  width: calc(100% - 270px);
+  margin-left: 20px;
+  background-color: #ffffdc;
+}
+
+.container > .row > .right_content > .study_box > .row > h3 {
+  line-height: 40px;
+  margin: 24px 48px 0 48px;
+  /*上右下左*/
+}
+
+.right_content .row {
+  padding: 2px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.right_content .news_list {
+  background-color: white;
+  margin: 10px 0px;
+  padding: 5px;
+}
+
+.right_content .news_list ul {
+  background-color: white;
+  height: 180px;
+  overflow: hidden;
+}
+
+.right_content .news_list ul:hover {
+  overflow-y: scroll;
+}
+
+.right_content .news_list ul li {
+  padding: 10px;
+  border-bottom: 1px solid #CCC;
+}
+
+.right_content .news_list ul li:last-child {
+  border-bottom: 0px;
+}
+
+.right_content .news_list ul li .news_type {
+  padding: 5px 10px;
+  color: white;
+  margin: 2px 5px;
+  border-radius: 5px;
+}
+
+.bg_information {
+  background-color: #FF668B;
+}
+
+.bg_notice {
+  background-color: #17E7C4;
+}
+
+/*輪播*/
+.custom_slick {
+  text-align: center;
+  color: black;
+  width: 95%;
+  margin: 10px auto;
+}
+
+.custom_slick img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.custom_slick .group {
+  background-color: white;
+  margin: 10px 15px;
+  padding: 5px;
+}
+
+.custom_slick .bookClub_title {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.custom_slick .bookClub_author {
+  color: black;
+}
+
+.custom_slick .notes_title {
+  color: black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.custom_slick p {
+  color: black;
+  font-size: 12pt;
+  margin-bottom: 5px;
+}
+
+.study_box .notes_content {
+  color: black;
+  font-size: 10pt;
+  text-align: left;
+  width: 80%;
+  margin: 0px auto;
+  text-align: left;
+  z-index: 999;
+}
+
+.custom_slick .slick-prev:before,
+.custom_slick .slick-next:before {
+  color: #4f5b66;
+  font-size: 40px;
+}
+
+.custom_slick .slick-next {
+  right: 10px;
+  z-index: 999;
+}
+
+.custom_slick .slick_full_width {
+  width: 100% !important;
+}
+
+.custom_slick .slick-prev {
+  left: -5px;
+  z-index: 999;
+}
+
+/*按鈕樣式*/
+.btn_1 {
+  display: block;
+  background-color: #FF668B;
+  color: white;
+  width: 10%;
+  max-width: 200px;
+  min-width: 100px;
+  padding: 10px;
+  line-height: 15px;
+  border-radius: 20px;
+  margin: 10px auto;
+  border: 0px;
+  text-align: center;
+}
+
+.btn_2 {
+  display: block;
+  background-color: #FF668B;
+  color: white;
+  width: 10%;
+  max-width: 200px;
+  min-width: 100px;
+  padding: 10px;
+  line-height: 15px;
+  border-radius: 20px;
+  margin: 10px auto;
+  border: 0px;
+}
+
+.btn_3 {
+  display: block;
+  background-color: #FF668B;
+  color: white;
+  width: 10%;
+  max-width: 200px;
+  min-width: 100px;
+  padding: 10px;
+  line-height: 15px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 24px 48px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 1007px) {
+  .left_content {
+    width: 100%;
+  }
+
+  .right_content {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .study_box .img_box, .study_box .task_box {
+    display: none;
+  }
+
+  .left_content .study_box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left_content .study_box .btn_1 {
+    margin: 0px;
+  }
+
+  .left_content .information {
+    width: 100%;
+  }
+}
 .sllick img {
   margin: auto;
 }

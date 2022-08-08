@@ -10,4 +10,207 @@ head
 body 
     include header.pug
     //- header end --------------------------------------------------------
-    
+    .container
+      .row    
+        .left_content 
+          .study_box 
+            .information 
+              .profile 
+                .imgbox 
+                  img(src="/public/images/icon_User.svg", alt="")
+                .info 
+                  .name
+                    p 暱稱：Dan
+                  .lv_info 
+                    p 等級：LV.10
+                  .money 
+                    img(src="/public/images/icon_money.svg", alt="") 
+                    span ：10000
+          //- 勳章 
+          .study_box
+            .study_box_title 我的勳章
+            .img_box 
+              .row
+                img(src="public/images/medal.png", alt="")
+                img(src="public/images/medal.png", alt="")
+                img(src="public/images/medal.png", alt="")
+                img(src="public/images/medal.png", alt="")
+              .row 
+                img(src="public/images/medal.png", alt="")
+                img(src="public/images/medal.png", alt="")
+                img(src="public/images/medal.png", alt="")
+                img(src="public/images/medal.png", alt="")
+            .btn_1 查看全部
+          //- 任務
+          .study_box  
+            .study_box_title 我的任務
+            .task_box 
+              .task 
+                span 平台
+                span 連續登入3天
+              .task 
+                span 讀書
+                span 參與一場讀書會
+              .task 
+                span 筆記
+                span 發表一篇筆記
+            .btn_1 查看全部
+        //- 右邊區塊
+        .right_content 
+          //- 我的讀書會
+          .study_box 
+            .row 
+              h3 我的讀書會
+              a(href="").btn_3 查看全部
+            .custom_slick
+              .row#recommendBookClub
+                .col-sm-12.col-md-6.col-lg-3.group(href="#")
+                    img(src="public/images/book_back.png", alt="")
+                    h4 逆向工程
+                    p 主揪：丹丹
+                    a(href="").btn_2 更多資訊
+                .col-sm-12.col-md-6.col-lg-3.group(href="#")
+                    img(src="public/images/book_think.png", alt="")
+                    h4 火箭科學家
+                    p 主揪：Marty
+                    a(href="").btn_2 更多資訊
+                .col-sm-12.col-md-6.col-lg-3.group(href="#")
+                    img(src="public/images/book_talk.png", alt="")
+                    h4 溝通的方法
+                    p 主揪：Gimmy
+                    a(href="").btn_2 更多資訊
+                .col-sm-12.col-md-6.col-lg-3.group(href="#")
+                    img(src="public/images/book_habit.png", alt="")
+                    h4 原子習慣
+                    p 主揪：彥成
+                    a(href="").btn_2 更多資訊
+          //- 我的閱讀筆記
+          .study_box 
+            .row 
+              h3 我的閱讀筆記
+              a(href="").btn_3 查看全部
+            .custom_slick
+              .row#newNotes
+                .col-sm-12.col-md-6.col-lg-3.group(href="#").notes_card
+                  .notes_title 逆向工程
+                  p 筆者:丹丹
+                  p 筆記方法:問題
+                  .notes_content
+                  | 1.這本書再講什麼？
+                  br
+                  | 把成功的案例倒推、解構之中的秘訣，將當中的攻勢運用在自身。
+                  a(href="").btn_2 完整筆記
+                .col-sm-12.col-md-6.col-lg-3.group(href="#").notes_card
+                  .notes_title 溝通的方法
+                  p 筆者：Gimmy
+                  p 筆記方法：卡片
+                  .notes_content
+                  | - 溝通三個框
+                  br
+                  | 1.情緒
+                  br
+                  | 2.事實
+                  br
+                  | 3.期待
+                  a(href="").btn_2 完整筆記
+                .col-sm-12.col-md-6.col-lg-3.group(href="#").notes_card
+                  .notes_title 逆向工程
+                  p 筆者:丹丹
+                  p 筆記方法:問題
+                  .notes_content
+                  | 1.這本書再講什麼？
+                  br
+                  | 把成功的案例倒推、解構之中的秘訣，將當中的攻勢運用在自身。
+                  a(href="").btn_2 完整筆記
+                .col-sm-12.col-md-6.col-lg-3.group(href="#").notes_card
+                  .notes_title 溝通的方法
+                  p 筆者：Gimmy
+                  p 筆記方法：卡片
+                  .notes_content
+                  | - 溝通三個框
+                  br
+                  | 1.情緒
+                  br
+                  | 2.事實
+                  br
+                  | 3.期待
+                  a(href="").btn_2 完整筆記
+          //- 推薦讀書會
+          .study_box 
+            .row 
+              h3 推薦讀書會
+              a(href="").btn_3 查看全部
+            .custom_slick
+              .row#recommendBookClub
+                .col-sm-12.col-md-6.col-lg-3.group(href="#")
+                    img(src="public/images/book_back.png", alt="")
+                    h4 逆向工程
+                    p 主揪：丹丹
+                    a(href="").btn_2 更多資訊
+                .col-sm-12.col-md-6.col-lg-3.group(href="#")
+                    img(src="public/images/book_think.png", alt="")
+                    h4 火箭科學家
+                    p 主揪：Marty
+                    a(href="").btn_2 更多資訊
+                .col-sm-12.col-md-6.col-lg-3.group(href="#")
+                    img(src="public/images/book_talk.png", alt="")
+                    h4 溝通的方法
+                    p 主揪：Gimmy
+                    a(href="").btn_2 更多資訊
+                .col-sm-12.col-md-6.col-lg-3.group(href="#")
+                    img(src="public/images/book_habit.png", alt="")
+                    h4 原子習慣
+                    p 主揪：彥成
+                    a(href="").btn_2 更多資訊
+          //- 最新閱讀筆記
+          .study_box 
+            .row 
+              h3 最新閱讀筆記
+              a.btn_3 查看全部
+            .custom_slick
+              .row#newNotes
+                .col-sm-12.col-md-6.col-lg-3.group(href="#").notes_card
+                  .notes_title 逆向工程
+                  p 筆者:丹丹
+                  p 筆記方法:問題
+                  .notes_content
+                  | 1.這本書再講什麼？
+                  br
+                  | 把成功的案例倒推、解構之中的秘訣，將當中的攻勢運用在自身。
+                  a(href="").btn_2 完整筆記
+                .col-sm-12.col-md-6.col-lg-3.group(href="#").notes_card
+                  .notes_title 溝通的方法
+                  p 筆者：Gimmy
+                  p 筆記方法：卡片
+                  .notes_content
+                  | - 溝通三個框
+                  br
+                  | 1.情緒
+                  br
+                  | 2.事實
+                  br
+                  | 3.期待
+                  a(href="").btn_2 完整筆記
+                .col-sm-12.col-md-6.col-lg-3.group(href="#").notes_card
+                  .notes_title 逆向工程
+                  p 筆者:丹丹
+                  p 筆記方法:問題
+                  .notes_content
+                  | 1.這本書再講什麼？
+                  br
+                  | 把成功的案例倒推、解構之中的秘訣，將當中的攻勢運用在自身。
+                  a(href="").btn_2 完整筆記
+                .col-sm-12.col-md-6.col-lg-3.group(href="#").notes_card
+                  .notes_title 溝通的方法
+                  p 筆者：Gimmy
+                  p 筆記方法：卡片
+                  .notes_content
+                  | - 溝通三個框
+                  br
+                  | 1.情緒
+                  br
+                  | 2.事實
+                  br
+                  | 3.期待
+                  a(href="").btn_2 完整筆記
+    include footer.pug
