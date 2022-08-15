@@ -10,13 +10,20 @@ head
 body 
     include header.pug
     //- header end --------------------------------------------------------
-    .banner 
-        picture
-            source(media='(min-width:768px)' srcset='public/images/library_pc.png')
-            img.img_banner(src='public/images/library_phone.png' alt='')
-        a(href='#') 發表筆記
-    //- content start
-    .container
-      .row    
-        .left_content
+    //- .banner 
+    //-     picture
+    //-         source(media='(min-width:768px)' srcset='public/images/library_pc.png')
+    //-         img.img_banner(src='public/images/library_phone.png' alt='')
+    //-     a(href='#') 發表筆記
+    //- content start-------------------------------------------------------
+    //- .container
+    //-   .row    
+    //-     .left_content
+    //- 開發中-----------------------------------------------------------
+    .develop_banner 
+      .word
+        h1 Coming soon  
+        h2 先去我的書房看看吧
+        a(href="study.html") 馬上前往
     
+    include footer.pug

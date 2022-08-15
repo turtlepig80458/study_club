@@ -38,8 +38,15 @@ body {
 // ========================================================
 
 // header {
-//     background-color: rgb(252, 252, 175);
-//     height: 80px;
+//   background-color: white;
+//   // height: 60px;
+//   width: 100%;
+//   position: fixed;
+//   z-index: 9000;
+//   overflow: auto;
+// }
+// header.active {
+//   box-shadow: 0 0 10px rgba(0,0,0,0.8);   
 // }
 
 // // LOGO start
@@ -579,7 +586,7 @@ dd>a {
 
 .down {
     background-color: #00adaa25;
-    padding: 5px;
+    padding: 5px 100px;
 }
 
 .down .row {
@@ -672,7 +679,7 @@ dd>a {
     right: 0;
 }
 // =====================================================================
-// ===========================書房頁=====================================
+// ===========================study書房頁=====================================
 // ======================================================================
     /*左邊區塊*/
     .left_content {
@@ -1008,12 +1015,94 @@ dd>a {
 
     // ==========================書房頁End======================
 
+// =====================================================================
+// ======================library圖書館 start=====================================
+// ======================================================================
+.develop_banner {
+  // padding-top: 100px;
+  width:100%;
+  height: calc(100vh - 217px);
+  background-color: rgba(0,0,0,0.6);
+  background-blend-mode: multiply;
+  background-image:url("../../public/images/libraryBG.jpg");
+  background-repeat: no-repeat;
+  //background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+//  超過1008px以上執行 start
+@media(min-width:1008px) {
+  .word {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    // padding-top: 5%;
+    line-height: 100px;
+    color: white
+  }
+  .word h1{
+    padding: 60px auto;
+    font-size: 80px;
+  }
+  .word h2{
+    font-size: 30px;
+  }
+  .word a{
+    display: block;
+    background-color: #FF668B;
+    color: white;
+    width: 10%;
+    max-width: 500px;
+    min-width: 200px;
+    padding: 10px;
+    line-height: 30px;
+    border-radius: 30px;
+    margin: 10px auto;
+    border: 0px;
+    font-size: 17px;
+  }
+}
+//  小於1007px以下執行 start
+@media (max-width:1007px) {
+  .word {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    // padding-top: 50px;
+    line-height: 50px;
+    color: white
+  }
+  .word h1{
+    padding: 60px auto;
+    font-size: 40px;
+  }
+  // .word h2{
+  //   font-size: 25px;
+  // }
+  .word a{
+    display: block;
+    background-color: #FF668B;
+    color: white;
+    width: 10%;
+    max-width: 200px;
+    min-width: 100px;
+    padding: 10px;
+    line-height: 15px;
+    border-radius: 20px;
+    margin: 10px auto;
+}
+}
 // ===================================================================
 // JS輪播=============================================================
 .sllick img {
   margin: auto;
-  }
+}
 .slick-next:before, .slick-prev:before {
   color: #FF668B;
   opacity: 1;
-  }
+}

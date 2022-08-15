@@ -396,7 +396,7 @@ dd > a {
 
 .down {
   background-color: #00adaa25;
-  padding: 5px;
+  padding: 5px 100px;
 }
 
 .down .row {
@@ -768,6 +768,82 @@ dd > a {
 
   .left_content .information {
     width: 100%;
+  }
+}
+.develop_banner {
+  width: 100%;
+  height: calc(100vh - 217px);
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+  background-image: url("../../public/images/libraryBG.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1008px) {
+  .word {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    line-height: 100px;
+    color: white;
+  }
+
+  .word h1 {
+    padding: 60px auto;
+    font-size: 80px;
+  }
+
+  .word h2 {
+    font-size: 30px;
+  }
+
+  .word a {
+    display: block;
+    background-color: #FF668B;
+    color: white;
+    width: 10%;
+    max-width: 500px;
+    min-width: 200px;
+    padding: 10px;
+    line-height: 30px;
+    border-radius: 30px;
+    margin: 10px auto;
+    border: 0px;
+    font-size: 17px;
+  }
+}
+@media (max-width: 1007px) {
+  .word {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    line-height: 50px;
+    color: white;
+  }
+
+  .word h1 {
+    padding: 60px auto;
+    font-size: 40px;
+  }
+
+  .word a {
+    display: block;
+    background-color: #FF668B;
+    color: white;
+    width: 10%;
+    max-width: 200px;
+    min-width: 100px;
+    padding: 10px;
+    line-height: 15px;
+    border-radius: 20px;
+    margin: 10px auto;
   }
 }
 .sllick img {
