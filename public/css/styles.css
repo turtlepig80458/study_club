@@ -493,24 +493,21 @@ dd > a {
   display: flex;
 }
 
-.study_box .profile .imgBox {
-  background-color: white;
-  width: 100px;
+.container > .row > .left_content > .study_box > .information > .profile > .imgbox {
+  width: 80px;
   display: block;
   border-radius: 10px;
   margin-right: 5px;
 }
 
-.study_box .profile .imgBox img {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  display: block;
+.container > .row > .left_content > .study_box > .information > .profile > .imgbox img {
+  width: 100%;
 }
 
 .study_box .profile .info {
   display: grid;
   justify-content: space-around;
+  line-height: 25px;
 }
 
 .study_box .profile .info img {
@@ -521,6 +518,7 @@ dd > a {
 .study_box .profile .money img {
   width: 24px;
   height: 24px;
+  box-sizing: border-box;
 }
 
 .study_box .lv_info {
@@ -574,7 +572,6 @@ dd > a {
 }
 
 .right_content .row {
-  padding: 2px 0px;
   display: flex;
   justify-content: space-between;
 }
@@ -634,7 +631,7 @@ dd > a {
 
 .custom_slick .group {
   background-color: white;
-  margin: 10px 15px;
+  margin: 0 15px 10px 15px;
   padding: 5px;
 }
 
@@ -785,17 +782,17 @@ dd > a {
 @media (min-width: 1008px) {
   .word {
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%);
     text-align: center;
-    line-height: 100px;
+    line-height: 80px;
     color: white;
   }
 
   .word h1 {
-    padding: 60px auto;
-    font-size: 80px;
+    padding: 50px auto;
+    font-size: 60px;
   }
 
   .word h2 {
