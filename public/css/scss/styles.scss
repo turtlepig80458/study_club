@@ -1106,7 +1106,8 @@ dd>a {
 .sllick img {
   margin: auto;
 }
-.slick-next:before, .slick-prev:before {
+section .container .slick-next:before,section .container .slick-prev:before {
   color: #FF668B;
   opacity: 1;
+  
 }
